@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import MapView from "./components/MapLeafleat.vue";
+// import MapView from "./components/MapLeafleat.vue";
+import MapAlter from "./components/MapAlter.vue";
 import Navbar from "./components/Navbar.vue";
 </script>
 
 <template>
   <Navbar />
-  <div
-    class="bg-color-neutral flex flex-col items-center justify-center"
-  >
-    <MapView />
+  <div class="bg-color-neutral flex flex-col items-center justify-center">
+    <!-- <MapView /> -->
+    <MapAlter />
   </div>
 </template>
 
