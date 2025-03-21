@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted, reactive, computed } from "vue";
+import { ref, onMounted, reactive, computed, watch } from "vue";
 import { Site } from "../types/DataLocation.ts";
 import markerRedIcon from "../assets/marker-red.png";
 import markerSparingIcon from "../assets/marker-sparing.png";
@@ -11,6 +11,8 @@ import Fill from "ol/style/Fill";
 import Stroke from "ol/style/Stroke";
 import Circle from "ol/style/Circle";
 import Text from "ol/style/Text";
+import axios from "axios";
+import CardPopUp from "./CardPopUp.vue";
 
 const mapRef = ref(null);
 const center = ref([118, -2.5]);
@@ -28,6 +30,74 @@ const filteredData = computed(() => {
     selectedType.value.includes(site.tipe)
   );
 });
+const deviceData = reactive({
+  sparing: [],
+  base: { updated: [], not_updated: [] },
+  onlimo: [],
+  base_krwg: {
+    krwg: {
+      id: "",
+      tempat: "",
+      last_update: "",
+    },
+  },
+});
+const errorMessage = ref(null);
+
+async function getLatesUpdate() {
+  try {
+    const response = await axios.get(
+      "https://api-dashboard.getsensync.com/api/last-update"
+    );
+    deviceData.base = response.data.base;
+    deviceData.base_krwg = response.data.base_krwg;
+    deviceData.onlimo = response.data.onlimo;
+    deviceData.sparing = response.data.sparing;
+    checkStatus();
+  } catch (error) {
+    console.log(error);
+    errorMessage.value = error.message;
+  }
+}
+
+function checkStatus() {
+  const now = new Date();
+
+  const deviceLastUpdateMap = new Map();
+  // add sparing to map
+  deviceData.sparing.forEach((device) => {
+    deviceLastUpdateMap.set(device.id_device, new Date(device.last_update));
+  });
+  // add onlimo to map
+  deviceData.onlimo.forEach((device) => {
+    deviceLastUpdateMap.set(device.id_device, new Date(device.last_update));
+  });
+
+  // add base krwg to map
+  deviceLastUpdateMap.set(
+    deviceData.base_krwg.krwg.id,
+    new Date(deviceData.base_krwg.krwg.last_update)
+  );
+
+  // add base klhk to new set
+  const updatedSet = new Set(deviceData.base.updated.map((b) => b.id));
+  const notUpdatedSet = new Set(deviceData.base.not_updated.map((b) => b.id));
+
+  dataSite.value.forEach((site) => {
+    if (deviceLastUpdateMap.has(site.id)) {
+      // Jika ada last_update, cek apakah masih dalam 30 menit terakhir
+      const lastUpdateTime = deviceLastUpdateMap.get(site.id);
+      const diffMinutes = (now - lastUpdateTime) / 60000;
+      site.status = diffMinutes <= 30 ? "Online" : "Offline";
+    } else if (updatedSet.has(site.id)) {
+      site.status = "Online";
+    } else if (notUpdatedSet.has(site.id)) {
+      site.status = "Offline";
+    } else {
+      site.status = "Undefined";
+    }
+  });
+}
 
 const getMarkerIcon = (type) => {
   switch (type) {
@@ -76,7 +146,6 @@ const overrideStyleFunction = (feature) => {
     });
   } else {
     const dominantType = getDominantType(clusteredFeatures);
-    console.log(dominantType);
     const fillColor = typeColors[dominantType] || "rgba(200, 200, 200, 0.6)";
 
     return new Style({
@@ -93,6 +162,11 @@ const overrideStyleFunction = (feature) => {
     });
   }
 };
+
+onMounted(() => {
+  getLatesUpdate();
+  setInterval(getLatesUpdate, 1800000);
+});
 
 // Menangkap event klik di peta
 onMounted(() => {
@@ -116,6 +190,7 @@ onMounted(() => {
 
           popUpProps.name = foundMarker ? foundMarker.nama : "No Name";
           popUpProps.address = foundMarker.alamat;
+          popUpProps.status = foundMarker.status;
 
           popupPosition.value = coordinate;
         } else {
@@ -164,15 +239,24 @@ onMounted(() => {
 
     <!-- Popup -->
     <ol-overlay v-if="popupPosition" :position="popupPosition">
-      <div class="popup max-w-3xs">
+      <CardPopUp
+        class="popup"
+        :name="popUpProps.name"
+        :address="popUpProps.address"
+        :status="popUpProps.status"
+      />
+      <!-- <div class="popup max-w-3xs">
         <h3 class="font-bold text-lg">{{ popUpProps.name }}</h3>
         <span class="text-sm line-clamp-2">{{ popUpProps.address }}</span>
-        <div class="w-full bg-success h-fit">
+        <div
+          class="w-full h-fit"
+          :class="popUpProps.status == 'Aktif' ? 'bg-success' : 'bg-error'"
+        >
           <span class="text-center line-clamp-2 font-bold text-white mt-2">{{
             popUpProps.status
           }}</span>
         </div>
-      </div>
+      </div> -->
     </ol-overlay>
   </ol-map>
 
@@ -207,7 +291,6 @@ onMounted(() => {
 
 .popup {
   background: white;
-  padding: 10px;
   border-radius: 5px;
   border: 1px solid black;
   font-size: 14px;

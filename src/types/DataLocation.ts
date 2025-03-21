@@ -7,6 +7,7 @@ export const Site = [
     Lat: -6.9374571,
     Long: 107.5364919,
     tipe: "sparing",
+    status: true,
   },
   {
     id: "sparing02",
@@ -16,6 +17,7 @@ export const Site = [
     Lat: -6.5531083,
     Long: 107.4101544,
     tipe: "sparing",
+    status: true,
   },
   {
     id: "sparing03",
@@ -25,6 +27,7 @@ export const Site = [
     Lat: -6.9226832,
     Long: 107.5413683,
     tipe: "sparing",
+    status: true,
   },
   {
     id: "sparing04",
@@ -34,6 +37,7 @@ export const Site = [
     Lat: -6.8953855,
     Long: 107.4959834,
     tipe: "sparing",
+    status: true,
   },
   {
     id: "sparing05",
@@ -43,6 +47,7 @@ export const Site = [
     Lat: -6.4493131,
     Long: 107.4572677,
     tipe: "sparing",
+    status: true,
   },
   {
     id: "sparing06",
@@ -52,6 +57,7 @@ export const Site = [
     Lat: -6.4244492,
     Long: 107.4187869,
     tipe: "sparing",
+    status: true,
   },
   {
     id: "sparing07",
@@ -61,6 +67,7 @@ export const Site = [
     Lat: -6.9801221,
     Long: 107.6185288,
     tipe: "sparing",
+    status: true,
   },
   {
     id: "sparing08",
@@ -70,6 +77,7 @@ export const Site = [
     Lat: -7.0384787,
     Long: 107.5906626,
     tipe: "sparing",
+    status: true,
   },
   {
     id: "sparing09",
@@ -79,6 +87,7 @@ export const Site = [
     Lat: -7.0465691,
     Long: 107.7506977,
     tipe: "sparing",
+    status: true,
   },
   {
     id: "sparing10",
@@ -88,6 +97,7 @@ export const Site = [
     Lat: -6.5671703,
     Long: 106.5889997,
     tipe: "sparing",
+    status: true,
   },
   {
     id: "sparing11",
@@ -97,6 +107,7 @@ export const Site = [
     Lat: -6.5791553,
     Long: 106.5895596,
     tipe: "sparing",
+    status: true,
   },
   {
     id: "sparing12",
@@ -106,98 +117,175 @@ export const Site = [
     Lat: -6.8387241,
     Long: 107.4084301,
     tipe: "sparing",
+    status: true,
   },
   {
-    id: "sparingPKT",
-    nama: "Pupuk Kalimantan Timur",
+    id: "weaving01",
+    nama: "Indorama Weaving01",
     alamat:
-      "G4RR+V8C, Gn. Kelua, Kec. Samarinda Ulu, Kota Samarinda, Kalimantan Timur 75131",
-    Lat: 0.1800,
-    Long: 117.4939,
+      "Jl. Industri Ubrug, Kembangkuning, Purwakarta Regency, West Java, Indonesia",
+    Lat: -6.5631083,
+    Long: 107.4201544,
     tipe: "sparing",
+    status: true,
   },
   {
-    id: "base01",
+    id: "weaving02",
+    nama: "Indorama Weaving02",
+    alamat:
+      "Jl. Industri Ubrug, Kembangkuning, Purwakarta Regency, West Java, Indonesia",
+    Lat: -6.5431083,
+    Long: 107.4001544,
+    tipe: "sparing",
+    status: true,
+  },
+  {
+    id: "spinning",
+    nama: "Indorama Spinning",
+    alamat:
+      "Jl. Industri Ubrug, Kembangkuning, Purwakarta Regency, West Java, Indonesia",
+    Lat: -6.5521083,
+    Long: 107.4111544,
+    tipe: "sparing",
+    status: true,
+  },
+  {
+    id: "ambon",
     nama: "Ambon",
+    alamat:
+      "Jl. Sultan Hasanuddin, Kelurahan Honipopu, Kecamatan Sirimau, Kota Ambon, Maluku, Indonesia​",
     Lat: -3.6930873,
     Long: 128.1812567,
     tipe: "base",
+    status: true,
   },
   {
-    id: "base02",
+    id: "gorontalo",
     nama: "Gorontalo",
+    alamat:
+      "Jl. Jenderal Sudirman, Kelurahan Ipilo, Kecamatan Kota Timur, Kota Gorontalo, Gorontalo, Indonesia",
     Lat: 0.5514208,
     Long: 123.0573024,
     tipe: "base",
+    status: true,
   },
   {
-    id: "base03",
+    id: "kendari",
     nama: "Kendari",
+    alamat:
+      "Jl. Ahmad Yani, Kelurahan Mandonga, Kecamatan Mandonga, Kota Kendari, Sulawesi Tenggara, Indonesia",
     Lat: -3.97208394,
     Long: 122.51419888,
     tipe: "base",
+    status: true,
   },
   {
-    id: "base04",
+    id: "mamuju",
     nama: "Mamuju",
+    alamat:
+      "Jl. Jenderal Sudirman, Kelurahan Binanga, Kecamatan Mamuju, Kabupaten Mamuju, Sulawesi Barat, Indonesia",
     Lat: -2.67572686,
     Long: 118.89081881,
     tipe: "base",
+    status: true,
   },
   {
-    id: "base05",
+    id: "manokwari",
     nama: "Manokwari",
+    alamat:
+      "Jl. Yos Sudarso, Kelurahan Sanggeng, Kecamatan Manokwari Barat, Kabupaten Manokwari, Papua Barat, Indonesia",
     Lat: -0.8908335,
     Long: 134.0401184,
     tipe: "base",
+    status: true,
   },
   {
-    id: "base06",
+    id: "oi",
     nama: "Oi",
+    alamat:
+      "Jl. Lintas Sumatera, Desa Ogan Ilir, Kecamatan Lubuk Batang, Kabupaten Ogan Komering Ulu, Sumatera Selatan, Indonesia",
     Lat: -3.2355792,
     Long: 104.6652638,
     tipe: "base",
+    status: true,
   },
   {
-    id: "base07",
+    id: "oki",
     nama: "Oki",
+    alamat:
+      "Jl. Raya Kayuagung, Kelurahan Kedaton, Kecamatan Kayuagung, Kabupaten Ogan Komering Ilir, Sumatera Selatan, Indonesia",
     Lat: -3.4111286,
     Long: 104.8237439,
     tipe: "base",
+    status: true,
   },
   {
-    id: "base08",
+    id: "palu",
     nama: "Palu",
+    alamat:
+      "Jl. Moh. Hatta, Kelurahan Lolu Utara, Kecamatan Palu Selatan, Kota Palu, Sulawesi Tengah, Indonesia",
     Lat: -0.88856113,
     Long: 119.86710194,
     tipe: "base",
+    status: true,
   },
   {
-    id: "base09",
+    id: "pangkal_pinang",
     nama: "Pangkal Pinang",
+    alamat:
+      "Jl. Jenderal Sudirman, Kelurahan Batin Tikal, Kecamatan Taman Sari, Kota Pangkal Pinang, Kepulauan Bangka Belitung, Indonesia",
     Lat: -2.14998011,
     Long: 106.11060219,
     tipe: "base",
+    status: true,
   },
   {
-    id: "base10",
+    id: "samarinda",
     nama: "Samarinda",
+    alamat:
+      "Jl. Pangeran Antasari, Kelurahan Air Hitam, Kecamatan Samarinda Ulu, Kota Samarinda, Kalimantan Timur, Indonesia",
     Lat: -0.4890044,
     Long: 117.1471739,
     tipe: "base",
+    status: true,
   },
   {
-    id: "base11",
+    id: "serang",
     nama: "Serang",
+    alamat:
+      "Jl. Jenderal Ahmad Yani, Kelurahan Cimuncang, Kecamatan Serang, Kota Serang, Banten, Indonesia",
     Lat: -6.12048382,
     Long: 106.1813008,
     tipe: "base",
+    status: true,
   },
   {
-    id: "base12",
+    id: "ternate",
     nama: "Ternate",
+    alamat:
+      "Jl. Pahlawan Revolusi, Kelurahan Gamalama, Kecamatan Ternate Tengah, Kota Ternate, Maluku Utara, Indonesia",
     Lat: 0.78725994,
     Long: 127.37470112,
     tipe: "base",
+    status: true,
+  },
+  {
+    id: "baseKRWG",
+    nama: "Karawang",
+    alamat: "M8R4+JGH Nagasari, Karawang, Jawa Barat",
+    Lat: -6.308437,
+    Long: 107.306348,
+    tipe: "base",
+    status: true,
+  },
+  {
+    id: "onlimo",
+    nama: "DLH KRWG",
+    alamat:
+      "Jl. By Pass Tanjungpura No.1, Tanjungmekar, Kec. Karawang Barat., Karawang, Jawa Barat 41316",
+    Lat: -6.307923,
+    Long: 107.299843,
+    tipe: "onlimo",
+    status: true,
   },
 ];
