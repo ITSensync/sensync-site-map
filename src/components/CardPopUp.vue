@@ -12,13 +12,17 @@ const { name, address, status } = defineProps({
     type: String,
     required: true,
   },
+  img: {
+    type: String,
+  },
 });
 </script>
 
 <template>
   <div class="card bg-base-100 max-w-xs shadow-sm">
+    <img :src="img" alt="Shoes" class="object-contain" />
     <div class="card-body">
-      <div class="flex flex-row items-center gap-2 ">
+      <div class="flex flex-row items-center gap-2">
         <div class="ml-1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
