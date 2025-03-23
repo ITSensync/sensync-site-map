@@ -21,11 +21,21 @@ const popUpProps = reactive({
   name: "",
   address: "",
   status: "Aktif",
+  img: "",
 });
 const popupPosition = ref(null);
 const dataSite = ref(Site);
 const selectedType = ref(["sparing", "base", "onlimo"]);
+const selectedSite = ref("");
+const listSelectSite = computed(() => {
+  return dataSite.value.filter((site) =>
+    selectedType.value.includes(site.tipe)
+  );
+});
 const filteredData = computed(() => {
+  if (selectedSite.value != "") {
+    return dataSite.value.filter((site) => site.nama === selectedSite.value);
+  }
   return dataSite.value.filter((site) =>
     selectedType.value.includes(site.tipe)
   );
@@ -43,6 +53,20 @@ const deviceData = reactive({
   },
 });
 const errorMessage = ref(null);
+const selectedSiteCoordinates = computed(() => {
+  const site = filteredData.value.find(
+    (site) => site.nama === selectedSite.value
+  );
+  return site
+    ? {
+        zoom: 10,
+        coordinate: [site.Long, site.Lat],
+      }
+    : {
+        zoom: 5,
+        coordinate: [118, -2.5],
+      };
+});
 
 async function getLatesUpdate() {
   try {
@@ -163,6 +187,17 @@ const overrideStyleFunction = (feature) => {
   }
 };
 
+watch(selectedSiteCoordinates, (newCoords) => {
+  if (mapRef.value) {
+    const view = mapRef.value.map.getView();
+    view.animate({
+      center: newCoords.coordinate,
+      zoom: newCoords.zoom,
+      duration: 1000, // Durasi animasi dalam milidetik (1 detik)
+    });
+  }
+});
+
 onMounted(() => {
   getLatesUpdate();
   setInterval(getLatesUpdate, 1800000);
@@ -191,6 +226,9 @@ onMounted(() => {
           popUpProps.name = foundMarker ? foundMarker.nama : "No Name";
           popUpProps.address = foundMarker.alamat;
           popUpProps.status = foundMarker.status;
+          popUpProps.img = foundMarker.img
+            ? foundMarker.img
+            : "https://placehold.co/300x100?text=Image";
 
           popupPosition.value = coordinate;
         } else {
@@ -211,6 +249,13 @@ onMounted(() => {
       {{ type.charAt(0).toUpperCase() + type.slice(1) }}
     </label>
   </div>
+
+  <select class="select search-input" v-model="selectedSite">
+    <option selected value="">All Site</option>
+    <option v-for="site in listSelectSite" :key="site.id" :value="site.nama">
+      {{ site.nama }} ({{ site.tipe }})
+    </option>
+  </select>
 
   <ol-map ref="mapRef" style="width: 100%; height: 90vh">
     <ol-view :center="center" :zoom="zoom" projection="EPSG:4326" />
@@ -244,6 +289,7 @@ onMounted(() => {
         :name="popUpProps.name"
         :address="popUpProps.address"
         :status="popUpProps.status"
+        :img="popUpProps.img"
       />
       <!-- <div class="popup max-w-3xs">
         <h3 class="font-bold text-lg">{{ popUpProps.name }}</h3>
@@ -303,6 +349,14 @@ onMounted(() => {
   left: 20px;
   background: white;
   padding: 10px;
+  border-radius: 5px;
+  z-index: 998;
+}
+
+.search-input {
+  position: absolute;
+  top: 90px;
+  right: 20px;
   border-radius: 5px;
   z-index: 998;
 }
