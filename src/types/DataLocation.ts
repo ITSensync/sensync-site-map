@@ -8,6 +8,7 @@ export const Site = [
     Long: 107.5364919,
     tipe: "sparing",
     status: true,
+    img: "https://placehold.co/600x400?text=Hello+World",
   },
   {
     id: "sparing02",
