@@ -15,7 +15,7 @@ onMounted(() => {
       <Sidebar />
     </div>
     <div class="navbar-center">
-      <a class="text-2xl font-extrabold">Sensync Site</a>
+      <a class="text-2xl font-extrabold uppercase">Sensync Site</a>
     </div>
     <div class="navbar-end">
       <ul class="menu menu-horizontal px-1">

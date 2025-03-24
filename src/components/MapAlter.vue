@@ -228,7 +228,7 @@ onMounted(() => {
           popUpProps.status = foundMarker.status;
           popUpProps.img = foundMarker.img
             ? foundMarker.img
-            : "https://placehold.co/300x100?text=Image";
+            : "https://placehold.co/200x150?text=Image";
 
           popupPosition.value = coordinate;
         } else {
@@ -261,9 +261,19 @@ onMounted(() => {
     <ol-view :center="center" :zoom="zoom" projection="EPSG:4326" />
 
     <!-- Layer OpenStreetMap -->
+    <!-- <ol-tile-layer>
+      <ol-source-xyz
+        url="https://{a-c}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
+      />
+    </ol-tile-layer> -->
     <ol-tile-layer>
-      <ol-source-osm />
+      <ol-source-xyz
+        url="https://{a-c}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
+      />
     </ol-tile-layer>
+    <!-- <ol-tile-layer>
+      <ol-source-xyz url="https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}" />
+    </ol-tile-layer> -->
 
     <!-- Layer Marker -->
     <ol-vector-layer>
