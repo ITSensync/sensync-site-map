@@ -8,7 +8,7 @@ export const Site = [
     Long: 107.5364919,
     tipe: "sparing",
     status: true,
-    img: "https://placehold.co/600x400?text=Hello+World",
+    img: "https://res.cloudinary.com/dp7yp5kgv/image/upload/v1742779162/Foto%20site/Qua%20Sparing/Gistex/IMG-20250321-WA0024_z4uw2a.jpg",
   },
   {
     id: "sparing02",
@@ -19,6 +19,7 @@ export const Site = [
     Long: 107.4101544,
     tipe: "sparing",
     status: true,
+    // img: "",
   },
   {
     id: "sparing03",
@@ -29,6 +30,7 @@ export const Site = [
     Long: 107.5413683,
     tipe: "sparing",
     status: true,
+    img: "https://res.cloudinary.com/dp7yp5kgv/image/upload/v1742779164/Foto%20site/Qua%20Sparing/PMT/IMG-20250321-WA0020_v6yxx1.jpg",
   },
   {
     id: "sparing04",
@@ -39,6 +41,7 @@ export const Site = [
     Long: 107.4959834,
     tipe: "sparing",
     status: true,
+    img: "https://res.cloudinary.com/dp7yp5kgv/image/upload/v1742779163/Foto%20site/Qua%20Sparing/Innojaya/IMG-20250321-WA0031_xgih3f.jpg",
   },
   {
     id: "sparing05",
@@ -49,6 +52,7 @@ export const Site = [
     Long: 107.4572677,
     tipe: "sparing",
     status: true,
+    img: "https://res.cloudinary.com/dp7yp5kgv/image/upload/v1742779162/Foto%20site/Qua%20Sparing/Besland/IMG-20250321-WA0029_nnymmi.jpg",
   },
   {
     id: "sparing06",
@@ -59,6 +63,7 @@ export const Site = [
     Long: 107.4187869,
     tipe: "sparing",
     status: true,
+    img: "https://res.cloudinary.com/dp7yp5kgv/image/upload/v1742779168/Foto%20site/Qua%20Sparing/Indotaisei/IMG_0654_elpljz.jpg",
   },
   {
     id: "sparing07",
@@ -69,6 +74,7 @@ export const Site = [
     Long: 107.6185288,
     tipe: "sparing",
     status: true,
+    img: "https://res.cloudinary.com/dp7yp5kgv/image/upload/v1742779162/Foto%20site/Qua%20Sparing/Dalia/IMG-20250321-WA0023_zpinng.jpg",
   },
   {
     id: "sparing08",
@@ -79,6 +85,7 @@ export const Site = [
     Long: 107.5906626,
     tipe: "sparing",
     status: true,
+    img: "https://res.cloudinary.com/dp7yp5kgv/image/upload/v1742779163/Foto%20site/Qua%20Sparing/Papyrus/IMG-20250321-WA0021_sexmbk.jpg",
   },
   {
     id: "sparing09",
@@ -89,6 +96,7 @@ export const Site = [
     Long: 107.7506977,
     tipe: "sparing",
     status: true,
+    img: "https://res.cloudinary.com/dp7yp5kgv/image/upload/v1742779161/Foto%20site/Qua%20Sparing/BCP/IMG-20250321-WA0025_v9ab3e.jpg",
   },
   {
     id: "sparing10",
@@ -99,6 +107,7 @@ export const Site = [
     Long: 106.5889997,
     tipe: "sparing",
     status: true,
+    img: "https://res.cloudinary.com/dp7yp5kgv/image/upload/v1742779163/Foto%20site/Qua%20Sparing/Pangjaya/IMG-20220715-WA0002_fslsyk.jpg",
   },
   {
     id: "sparing11",
@@ -109,6 +118,7 @@ export const Site = [
     Long: 106.5895596,
     tipe: "sparing",
     status: true,
+    img: "https://res.cloudinary.com/dp7yp5kgv/image/upload/v1742779163/Foto%20site/Qua%20Sparing/LPA/IMG-20241202-WA0018_tsss2g.jpg",
   },
   {
     id: "sparing12",
@@ -119,6 +129,7 @@ export const Site = [
     Long: 107.4084301,
     tipe: "sparing",
     status: true,
+    img: "https://res.cloudinary.com/dp7yp5kgv/image/upload/v1742779163/Foto%20site/Qua%20Sparing/Kertas%20PDL/TimePhoto_20250312_122232_ujcunm.jpg",
   },
   {
     id: "weaving01",
@@ -159,6 +170,7 @@ export const Site = [
     Long: 128.1812567,
     tipe: "base",
     status: true,
+    img: "https://res.cloudinary.com/dp7yp5kgv/image/upload/v1742779167/Foto%20site/Base%20KLHK/Ambon/IMG_20200907_140119_HHT_asigdi.jpg",
   },
   {
     id: "gorontalo",
@@ -169,6 +181,7 @@ export const Site = [
     Long: 123.0573024,
     tipe: "base",
     status: true,
+    img: "https://res.cloudinary.com/dp7yp5kgv/image/upload/v1742779158/Foto%20site/Base%20KLHK/Gorontalo/TimePhoto_20221214_182633_n1ris1.jpg",
   },
   {
     id: "kendari",
@@ -179,6 +192,7 @@ export const Site = [
     Long: 122.51419888,
     tipe: "base",
     status: true,
+    img: "https://res.cloudinary.com/dp7yp5kgv/image/upload/v1742779158/Foto%20site/Base%20KLHK/Kendari/MVIMG_20200901_195615_nz5guw.jpg",
   },
   {
     id: "mamuju",
@@ -189,6 +203,7 @@ export const Site = [
     Long: 118.89081881,
     tipe: "base",
     status: true,
+    img: "https://res.cloudinary.com/dp7yp5kgv/image/upload/v1742779159/Foto%20site/Base%20KLHK/Mamuju/IMG20200902155438_de3gvg.jpg",
   },
   {
     id: "manokwari",
@@ -199,6 +214,7 @@ export const Site = [
     Long: 134.0401184,
     tipe: "base",
     status: true,
+    img: "https://res.cloudinary.com/dp7yp5kgv/image/upload/v1742779170/Foto%20site/Base%20KLHK/Manokwari/IMG_20200909_095240_itmfjw.jpg",
   },
   {
     id: "oi",
@@ -209,6 +225,7 @@ export const Site = [
     Long: 104.6652638,
     tipe: "base",
     status: true,
+    img: "https://res.cloudinary.com/dp7yp5kgv/image/upload/v1742779167/Foto%20site/Base%20KLHK/OKI-OI/IMG20201210152320_wd9sq1.jpg",
   },
   {
     id: "oki",
@@ -219,6 +236,7 @@ export const Site = [
     Long: 104.8237439,
     tipe: "base",
     status: true,
+    img: "https://res.cloudinary.com/dp7yp5kgv/image/upload/v1742779166/Foto%20site/Base%20KLHK/OKI-OI/IMG20201210151948_porvno.jpg",
   },
   {
     id: "palu",
@@ -229,6 +247,7 @@ export const Site = [
     Long: 119.86710194,
     tipe: "base",
     status: true,
+    img: "https://res.cloudinary.com/dp7yp5kgv/image/upload/v1742779159/Foto%20site/Base%20KLHK/Palu/TimePhoto_20241021_075639_igifjm.jpg",
   },
   {
     id: "pangkal_pinang",
@@ -239,6 +258,7 @@ export const Site = [
     Long: 106.11060219,
     tipe: "base",
     status: true,
+    img: "https://res.cloudinary.com/dp7yp5kgv/image/upload/v1742779159/Foto%20site/Base%20KLHK/Pangkalpinang/IMG-20200921-WA0134_wmegvb.jpg",
   },
   {
     id: "samarinda",
@@ -249,6 +269,7 @@ export const Site = [
     Long: 117.1471739,
     tipe: "base",
     status: true,
+    img: "https://res.cloudinary.com/dp7yp5kgv/image/upload/v1742779160/Foto%20site/Base%20KLHK/Samarinda/IMG_20200913_143455_HHT_v6xuuf.jpg",
   },
   {
     id: "serang",
@@ -259,6 +280,7 @@ export const Site = [
     Long: 106.1813008,
     tipe: "base",
     status: true,
+    img: "https://res.cloudinary.com/dp7yp5kgv/image/upload/v1742779160/Foto%20site/Base%20KLHK/Serang/IMG_20200822_173059_j9e9m7.jpg",
   },
   {
     id: "ternate",
@@ -269,6 +291,7 @@ export const Site = [
     Long: 127.37470112,
     tipe: "base",
     status: true,
+    img: "https://res.cloudinary.com/dp7yp5kgv/image/upload/v1742779161/Foto%20site/Base%20KLHK/Ternate/IMG-20200921-WA0017_af5kmw.jpg",
   },
   {
     id: "baseKRWG",
@@ -278,6 +301,7 @@ export const Site = [
     Long: 107.306348,
     tipe: "base",
     status: true,
+    img: "https://res.cloudinary.com/dp7yp5kgv/image/upload/v1742779157/Foto%20site/Base%20Karawang/base1_qvw6mw.jpg",
   },
   {
     id: "onlimo",
@@ -288,5 +312,6 @@ export const Site = [
     Long: 107.299843,
     tipe: "onlimo",
     status: true,
+    img: "https://res.cloudinary.com/dp7yp5kgv/image/upload/v1742779164/Foto%20site/Qua%20Onlimo/IMG_20240820_140303_uwrjme.jpg",
   },
 ];
