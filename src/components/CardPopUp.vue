@@ -20,7 +20,7 @@ const { name, address, status } = defineProps({
 
 <template>
   <div class="card bg-base-100 max-w-xs shadow-sm">
-    <img :src="img" alt="Shoes" class="object-contain" />
+    <img :src="img" alt="Shoes" class="aspect-3/2 object-cover" />
     <div class="card-body">
       <div class="flex flex-row items-center gap-2">
         <div class="ml-1">
