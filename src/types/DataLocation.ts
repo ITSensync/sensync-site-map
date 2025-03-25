@@ -19,7 +19,7 @@ export const Site = [
     Long: 107.4101544,
     tipe: "sparing",
     status: true,
-    // img: "",
+    img: "https://res.cloudinary.com/dp7yp5kgv/image/upload/v1742869887/Foto%20site/Indorama%20PWK/IPCI/2021-12-23_18.13.06_nozhbt.heic",
   },
   {
     id: "sparing03",
@@ -140,6 +140,7 @@ export const Site = [
     Long: 107.4201544,
     tipe: "sparing",
     status: true,
+    img: "https://res.cloudinary.com/dp7yp5kgv/image/upload/v1742869887/Foto%20site/Indorama%20PWK/Weaving%201/2021-12-13_16.37.00_ekepmb.heic",
   },
   {
     id: "weaving02",
@@ -150,6 +151,7 @@ export const Site = [
     Long: 107.4001544,
     tipe: "sparing",
     status: true,
+    img: "https://res.cloudinary.com/dp7yp5kgv/image/upload/v1742869889/Foto%20site/Indorama%20PWK/Weaving%202/IMG_0825_m1fnuc.jpg",
   },
   {
     id: "spinning",
@@ -160,6 +162,7 @@ export const Site = [
     Long: 107.4111544,
     tipe: "sparing",
     status: true,
+    img: "https://res.cloudinary.com/dp7yp5kgv/image/upload/v1742869886/Foto%20site/Indorama%20PWK/Spinning/IMG_0834_z8ejsy.jpg",
   },
   {
     id: "ambon",
