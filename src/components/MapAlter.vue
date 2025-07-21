@@ -112,11 +112,11 @@ function checkStatus() {
       // Jika ada last_update, cek apakah masih dalam 30 menit terakhir
       const lastUpdateTime = deviceLastUpdateMap.get(site.id);
       const diffMinutes = (now - lastUpdateTime) / 60000;
-      site.status = diffMinutes <= 30 ? "Online" : "Offline";
+      site.status = diffMinutes <= 30 ? "Online" : "Maintenance";
     } else if (updatedSet.has(site.id)) {
       site.status = "Online";
     } else if (notUpdatedSet.has(site.id)) {
-      site.status = "Offline";
+      site.status = "Maintenance";
     } else {
       site.status = "Undefined";
     }
