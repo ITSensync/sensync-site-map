@@ -45,7 +45,7 @@ const { name, address, status } = defineProps({
         </h2>
         <div
           class="badge"
-          :class="status === 'Online' ? 'badge-success' : 'badge-error'"
+          :class="status === 'Online' ? 'badge-success' : 'badge-info'"
         >
           {{ status }}
         </div>
