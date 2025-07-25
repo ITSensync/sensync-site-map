@@ -5,6 +5,7 @@ import markerRedIcon from "../assets/marker-red.png";
 import markerSparingIcon from "../assets/marker-sparing.png";
 import markerOnlimoIcon from "../assets/marker-onlimo.png";
 import markerBaseIcon from "../assets/marker-base.png";
+import markerSensyncLogo from "../assets/sensync-logo.png";
 import Style from "ol/style/Style";
 import Icon from "ol/style/Icon";
 import Fill from "ol/style/Fill";
@@ -160,12 +161,12 @@ const overrideStyleFunction = (feature) => {
 
   if (size === 1) {
     const properties = clusteredFeatures[0].getProperties();
-    const iconSrc = getMarkerIcon(properties.type);
+    const iconSrc = markerSensyncLogo;
 
     return new Style({
       image: new Icon({
         src: iconSrc,
-        scale: 0.1,
+        scale: 0.225,
       }),
     });
   } else {
