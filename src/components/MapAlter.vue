@@ -269,7 +269,7 @@ onMounted(() => {
     </ol-tile-layer> -->
     <ol-tile-layer>
       <ol-source-xyz
-        url="https://{a-c}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
+        url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
     </ol-tile-layer>
     <!-- <ol-tile-layer>
